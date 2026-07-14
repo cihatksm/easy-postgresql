@@ -3,3 +3,5 @@ package-lock.json
 
 /simple/config.js
 /simple/config.ts
+
+.update*
