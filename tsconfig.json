@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "node16",
+    "lib": ["ES2021"],
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "typeRoots": ["./types", "./node_modules/@types"]
+  },
+  "include": ["operations/**/*", "database/**/*", "simple/**/*", "*.ts"],
+  "exclude": ["node_modules", "dist", "dist/**/*", "simple"]
+}
