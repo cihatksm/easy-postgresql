@@ -29,7 +29,7 @@ const executeProcedure = async (procedureName, reference = {}, useRecordsets = f
     try {
         const keys = Object.keys(reference);
         const values = keys.map(k => reference[k]);
-        const params = keys.map((_, i) => `$${i + 1}::${pgTypeOf(values[i])}`).join(', ');
+        const params = keys.map((_, i) => `"${keys[i]}" := $${i + 1}`).join(", ");
         const queryText = `SELECT * FROM ${procedureName}(${params})`;
         const pool = (0, connect_to_server_1.getPool)();
         const client = await pool.connect();
