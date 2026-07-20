@@ -11,10 +11,10 @@ require("colors");
  * @param file - The file of the log.
      */
 function Log(title, alt, description, file = null) {
-    title = title ? (title.length > 20 ? title.substring(0, 20) + '...' : title) : null;
-    alt = alt ? (alt.length > 20 ? alt.substring(0, 20) + '...' : alt) : null;
-    description = description ? (description.length > 50 ? description.substring(0, 50) + '...' : description) : null;
-    file = file ? (file.length > 20 ? file.substring(0, 20) + '...' : file) : null;
+    title = title ? title : null;
+    alt = alt ? alt : null;
+    description = description ? description : null;
+    file = file ? file : null;
     let time = (new Date().toLocaleTimeString()).gray;
     title = title ? ('[' + title.trim() + ']').cyan.bold : null;
     alt = alt ? ('(' + alt.trim() + ')').magenta : null;
