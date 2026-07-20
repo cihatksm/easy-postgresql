@@ -35,9 +35,10 @@ export const executeProcedure = async (
     useRecordsets: boolean = false
 ): Promise<ProcedureResult> => {
     try {
+        const prefix = config.get.prefix() || '';
         const keys = Object.keys(reference);
         const values = keys.map(k => reference[k]);
-        const params = keys.map((_, i) => `"${keys[i]}" := $${i + 1}`).join(", ");
+        const params = keys.map((_, i) => `"${prefix}${keys[i]}" := $${i + 1}`).join(", ");
         const queryText = `SELECT * FROM ${procedureName}(${params})`;
 
         const pool = getPool();

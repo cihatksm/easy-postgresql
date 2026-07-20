@@ -1,6 +1,6 @@
 {
   "name": "easy-postgresql",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "This is a simple and easy to use postgresql library for node.js",
   "main": "dist/database.js",
   "types": "dist/database.d.ts",

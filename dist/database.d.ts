@@ -18,6 +18,7 @@ declare class EasyPostgresql {
     IsConnected: typeof isConnected;
     Config: {
         logingMode: (mode?: boolean) => void;
+        prefix: (prefix?: string) => void;
     };
 }
 declare const easyPostgresql: EasyPostgresql;
